@@ -25,6 +25,7 @@ from datetime import datetime
 
 import requests
 
+import calendar_sync
 import config
 
 SEEN_JOBS_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "seen_jobs.json")
@@ -176,6 +177,9 @@ def main():
     ]
 
     print(f"전체 {len(all_jobs)}건 중 키워드 일치 {len(filtered)}건, 신규 {len(new_jobs)}건")
+
+    # 마감일이 안 지난 공고들을 캘린더(Gist .ics)에 동기화
+    calendar_sync.sync_calendar(filtered)
 
     if new_jobs:
         send_slack_message(new_jobs)
