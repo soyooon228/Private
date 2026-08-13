@@ -193,7 +193,7 @@ def main():
 
 if __name__ == "__main__":
     main()
-  
+
 # 예시 데이터 (실제 크롤링된 데이터)
 job_notice = {
     'title': '2026년 하반기 채용 공고',
