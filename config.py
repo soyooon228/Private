@@ -23,7 +23,7 @@ DATA_GO_KR_API_KEY = os.environ.get(
 )
 
 # 2) API 엔드포인트
-API_ENDPOINT = "https://apis.data.go.kr/1051000/recruitment"
+API_ENDPOINT = "https://apis.data.go.kr/1051000/recruitment/list"
 
 # 3) 슬랙 Incoming Webhook URL
 #    로컬 실행용 기본값. GitHub Actions에서는 Secrets의 SLACK_WEBHOOK_URL이 우선 적용됩니다.
