@@ -3,12 +3,13 @@ name: 공공기관 채용정보 알림
 on:
   schedule:
     # 한국시간(KST) 기준 매일 09:00, 18:00 실행
+    # GitHub Actions는 UTC 기준이라 KST-9시간으로 계산: 09:00 KST = 00:00 UTC, 18:00 KST = 09:00 UTC
     - cron: "0 0 * * *"
     - cron: "0 9 * * *"
-  workflow_dispatch: {}
+  workflow_dispatch: {}   # 깃허브 화면에서 수동으로 "지금 실행"도 가능하게 함
 
 permissions:
-  contents: write
+  contents: write   # seen_jobs.json 변경사항을 저장소에 다시 커밋하기 위해 필요
 
 jobs:
   check-jobs:
@@ -29,14 +30,16 @@ jobs:
         env:
           DATA_GO_KR_API_KEY: ${{ secrets.DATA_GO_KR_API_KEY }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          GIST_TOKEN: ${{ secrets.GIST_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
         run: python job_alert.py
 
-      - name: 알림 발송 기록(seen_jobs.json) 저장소에 반영
+      - name: 알림 발송 기록(seen_jobs.json, calendar_jobs.json) 저장소에 반영
         run: |
           git config user.name "job-alert-bot"
           git config user.email "actions@users.noreply.github.com"
-          if [ -n "$(git status --porcelain seen_jobs.json)" ]; then
-            git add seen_jobs.json
+          if [ -n "$(git status --porcelain seen_jobs.json calendar_jobs.json)" ]; then
+            git add seen_jobs.json calendar_jobs.json
             git commit -m "chore: 확인한 공고 목록 업데이트 [skip ci]"
             git push
           else
