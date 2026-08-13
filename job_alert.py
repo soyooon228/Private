@@ -147,6 +147,18 @@ def send_slack_message(new_jobs: list) -> None:
         print(f"[에러] 슬랙 전송 실패: {e}")
 
 
+def send_no_new_jobs_message() -> None:
+    """새 공고가 없을 때 짧게 '정상 확인됨' 메시지를 보냅니다."""
+    now = datetime.now().strftime("%m/%d %H:%M")
+    payload = {"text": f"✅ 채용정보 확인 완료 ({now}) — 새로운 전산직 공고 없음"}
+    try:
+        resp = requests.post(config.SLACK_WEBHOOK_URL, json=payload, timeout=10)
+        resp.raise_for_status()
+        print("[알림] '새 공고 없음' 확인 메시지 전송 완료")
+    except requests.RequestException as e:
+        print(f"[에러] 슬랙 전송 실패: {e}")
+
+
 def main():
     print(f"[{datetime.now().isoformat(timespec='seconds')}] 채용정보 확인 시작")
 
@@ -171,6 +183,7 @@ def main():
         save_seen_jobs(seen_ids)
     else:
         print("새로운 공고가 없습니다.")
+        send_no_new_jobs_message()
 
 
 if __name__ == "__main__":
