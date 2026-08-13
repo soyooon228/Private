@@ -1,0 +1,4 @@
+seen_jobs.json.bak
+job_alert.log
+__pycache__/
+*.pyc
