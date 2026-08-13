@@ -95,11 +95,25 @@ def matches_keywords(job: dict) -> bool:
     return any(kw.lower() in text for kw in config.KEYWORDS)
 
 
-def build_slack_blocks(new_jobs: list) -> dict:
-    """새 공고 목록을 슬랙 메시지 payload로 변환합니다."""
-    lines = [f"*🔔 새로운 공공기관 채용공고 {len(new_jobs)}건*", ""]
+def is_highlight_region(job: dict) -> bool:
+    """config.py의 HIGHLIGHT_REGIONS에 해당하는 지역이면 True."""
+    region = job.get("workRgnNmLst", "")
+    return any(r in region for r in getattr(config, "HIGHLIGHT_REGIONS", []))
 
-    for job in new_jobs:
+
+def build_slack_blocks(new_jobs: list) -> dict:
+    """새 공고 목록을 슬랙 메시지 payload로 변환합니다.
+    관심 지역(HIGHLIGHT_REGIONS) 공고는 📍 표시를 붙이고 목록 맨 위로 정렬합니다."""
+    # 관심 지역 공고를 먼저, 나머지는 그 뒤에
+    sorted_jobs = sorted(new_jobs, key=lambda j: not is_highlight_region(j))
+
+    highlight_count = sum(1 for j in new_jobs if is_highlight_region(j))
+    header = f"*🔔 새로운 공공기관 채용공고 {len(new_jobs)}건*"
+    if highlight_count:
+        header += f"  (📍 관심지역 {highlight_count}건 포함)"
+    lines = [header, ""]
+
+    for job in sorted_jobs:
         title = job.get("recrutPbancTtl", "제목 없음")
         inst = job.get("instNm", "기관명 없음")
         region = job.get("workRgnNmLst", "")
@@ -113,7 +127,8 @@ def build_slack_blocks(new_jobs: list) -> dict:
         meta_parts = [p for p in [region, hire_type, recrut_se] if p]
         meta = " · ".join(meta_parts)
 
-        title_line = f"• *<{url}|{title}>*" if url else f"• *{title}*"
+        prefix = "📍 " if is_highlight_region(job) else "• "
+        title_line = f"{prefix}*<{url}|{title}>*" if url else f"{prefix}*{title}*"
         lines.append(title_line)
         lines.append(f"   🏢 {inst}" + (f"  |  {meta}" if meta else ""))
         lines.append(f"   ⏰ 마감: {deadline}")
