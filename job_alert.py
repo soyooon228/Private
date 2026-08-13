@@ -18,7 +18,8 @@
 
 전체 설정은 config.py 에서 관리합니다.
 """
-
+# main.py 예시
+from calendar_manager import add_job_deadline_to_calendar
 import json
 import os
 from datetime import datetime
@@ -192,3 +193,21 @@ def main():
 
 if __name__ == "__main__":
     main()
+  
+# 예시 데이터 (실제 크롤링된 데이터)
+job_notice = {
+    'title': '2026년 하반기 채용 공고',
+    'due_date': '2026-08-25',  # 반드시 'YYYY-MM-DD' 형식이어야 함
+    'link': 'https://example.com/notice/1'
+}
+
+# 1. 기존 슬랙 알림 전송 로직
+# send_slack_notification(job_notice)
+
+# 2. 구글 캘린더 마감일 추가
+if job_notice.get('due_date'):
+    add_job_deadline_to_calendar(
+        title=job_notice['title'],
+        due_date=job_notice['due_date'],
+        link_url=job_notice['link']
+    )
