@@ -41,9 +41,11 @@ jobs:
           if [ -n "$(git status --porcelain seen_jobs.json calendar_jobs.json)" ]; then
             git add seen_jobs.json calendar_jobs.json
             git commit -m "chore: 확인한 공고 목록 업데이트 [skip ci]"
+            git pull --rebase origin main
             git push
           else
             echo "변경 사항 없음"
+          fiecho "변경 사항 없음"
           fi
 name: Job Notice Automation
 
