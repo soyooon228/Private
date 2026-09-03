@@ -1,28 +1,4 @@
 {
-  "303990": {
-    "title": "한전KDN(주) 대구본부 배전자동화 공사 분야 작업원 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20260902",
-    "url": "https://없음"
-  },
-  "303963": {
-    "title": "한전KDN(주) 인천사업처 배전자동화분야 작업원 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20260902",
-    "url": "https://없음."
-  },
-  "304009": {
-    "title": "[한국수자원공사] 양주수도지사 단기계약근로자(지방상수도 시설운영_교대근무) 채용 공고",
-    "inst": "한국수자원공사",
-    "deadline": "20260902",
-    "url": "https://k-water.recruiter.co.kr"
-  },
-  "303961": {
-    "title": "2026년 하반기 건강보험심사평가원 정규직 채용 공고",
-    "inst": "건강보험심사평가원",
-    "deadline": "20260902",
-    "url": "https://www.hira.or.kr/re/recruit/recruitAdList.do?pgmid=HIRAA040078000000&WT.gnb=%EC%B1%84%EC%9A%A9%EA%B3%B5%EA%B3%A0"
-  },
   "304044": {
     "title": "2026년 하반기 신입직원 및 경력직원 채용 공고",
     "inst": "한국산업단지공단",
@@ -310,5 +286,29 @@
     "inst": "한국수자원공사",
     "deadline": "20260916",
     "url": "https://k-water.recruiter.co.kr"
+  },
+  "304605": {
+    "title": "한전KDN(주) 전북사업처 AMI분야 일용근로자 모집 공고",
+    "inst": "한전KDN",
+    "deadline": "20260917",
+    "url": "https://없음."
+  },
+  "304591": {
+    "title": "[한국수자원공사] 장흥수도지사 특수직(지방상수도 시설운영) 채용 공고",
+    "inst": "한국수자원공사",
+    "deadline": "20260917",
+    "url": "https://k-water.recruiter.co.kr"
+  },
+  "304573": {
+    "title": "한전KDN(주) 울산지사 배전분야 일용원 모집공고",
+    "inst": "한전KDN",
+    "deadline": "20260917",
+    "url": "https://없음."
+  },
+  "304537": {
+    "title": "한전KDN(주) 대구본부 AMI분야 작업원 모집공고",
+    "inst": "한전KDN",
+    "deadline": "20260917",
+    "url": "https://없음"
   }
 }
