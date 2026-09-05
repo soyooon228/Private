@@ -1,39 +1,9 @@
 {
-  "303979": {
-    "title": "2026년도 교통직(무기계약직) 공개채용 공고",
-    "inst": "한국도로교통공단",
-    "deadline": "20260904",
-    "url": "https://www.koroad.or.kr/main/recruit/recruitment_list.do"
-  },
-  "304132": {
-    "title": "[한국수자원공사] 청주권지사 단기계약근로자(기술관리 설비운영_배출수 처리시설) 채용 공고(육아휴직 대체인력)",
-    "inst": "한국수자원공사",
-    "deadline": "20260904",
-    "url": "https://k-water.recruiter.co.kr/"
-  },
   "304094": {
     "title": "한국항로표지기술원 개방형 공모직위(전략사업2처장) 채용 공고",
     "inst": "한국항로표지기술원",
     "deadline": "20260907",
     "url": "https://www.katon.or.kr/article/job_notice/detail/9624?pageIndex=1"
-  },
-  "304092": {
-    "title": "2026년 한국교통안전공단 개방형직위(AI서비스개발) 공모",
-    "inst": "한국교통안전공단",
-    "deadline": "20260904",
-    "url": "http://kotsa.career.co.kr"
-  },
-  "304076": {
-    "title": "한전KDN(주) 진주지사 AMI 분야 비정규직 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20260904",
-    "url": "https://없음."
-  },
-  "304051": {
-    "title": "2026년 국립생태원 하반기 체험형 청년인턴 채용 공고",
-    "inst": "국립생태원",
-    "deadline": "20260904",
-    "url": "http://nierecruit.fairy.im"
   },
   "304115": {
     "title": "한전KDN(주) 광주전남본부 전력통신분야 비정규직 모집공고",
@@ -292,5 +262,11 @@
     "inst": "한전KDN",
     "deadline": "20260917",
     "url": "https://없음"
+  },
+  "304557": {
+    "title": "2026년 하반기 IBK기업은행 일반직원(정규직) 수시채용 공고",
+    "inst": "중소기업은행",
+    "deadline": "20260921",
+    "url": "https://ibk.incruit.com"
   }
 }
