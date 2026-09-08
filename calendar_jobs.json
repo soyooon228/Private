@@ -1,28 +1,4 @@
 {
-  "304094": {
-    "title": "한국항로표지기술원 개방형 공모직위(전략사업2처장) 채용 공고",
-    "inst": "한국항로표지기술원",
-    "deadline": "20260907",
-    "url": "https://www.katon.or.kr/article/job_notice/detail/9624?pageIndex=1"
-  },
-  "304115": {
-    "title": "한전KDN(주) 광주전남본부 전력통신분야 비정규직 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20260907",
-    "url": "https://,"
-  },
-  "304114": {
-    "title": "한전KDN(주) 광주전남본부 AMI분야 비정규직 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20260907",
-    "url": "https://,"
-  },
-  "304111": {
-    "title": "한전KDN(주) 대구본부 포항지사 AMI분야 작업원 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20260907",
-    "url": "https://없음"
-  },
   "304192": {
     "title": "2026년 한국산업기술시험원 정규직 채용 공고",
     "inst": "한국산업기술시험원",
@@ -35,23 +11,11 @@
     "deadline": "20260908",
     "url": "https://kistep2026.recruiter.co.kr/"
   },
-  "304179": {
-    "title": "한전KDN(주) 원전인프라부 프로젝트계약근로자 채용공고",
-    "inst": "한전KDN",
-    "deadline": "20260907",
-    "url": "https://."
-  },
   "304167": {
     "title": "2026년 국립생태원 신규직원 채용 공고",
     "inst": "국립생태원",
     "deadline": "20260909",
     "url": "https://nie.careeron.co.kr/#/"
-  },
-  "304158": {
-    "title": "한전KDN(주) 부산본부 미터링사업팀 AMI 일괄위탁 작업원 모집공고(26-7차)",
-    "inst": "한전KDN",
-    "deadline": "20260907",
-    "url": "https://없음."
   },
   "304174": {
     "title": "한전KDN(주) 강원사업처 AMI분야 비정규직(장애인) 모집공고 ",
@@ -298,5 +262,59 @@
     "inst": "한전KDN",
     "deadline": "20260921",
     "url": "https://없음"
+  },
+  "304763": {
+    "title": "2026년 하반기 경력직원 채용",
+    "inst": "한국전기안전공사",
+    "deadline": "20260922",
+    "url": "https://kesco.or.kr/recruit/main.do"
+  },
+  "304761": {
+    "title": "2026년 하반기 한국도로공사 일반직 신입(인턴)사원 채용 공고",
+    "inst": "한국도로공사",
+    "deadline": "20260922",
+    "url": "https://www.ex.co.kr"
+  },
+  "304717": {
+    "title": "2026년도 하반기 정규직(신입사원) 채용공고",
+    "inst": "한국전력기술주식회사",
+    "deadline": "20260922",
+    "url": "https://kepco-enc.cairos.co.kr/kepco-enc/"
+  },
+  "304715": {
+    "title": "한전KDN(주) 광주전남본부 전력통신분야 비정규직 모집공고(재공고)",
+    "inst": "한전KDN",
+    "deadline": "20260921",
+    "url": "https://,"
+  },
+  "304713": {
+    "title": "한국수목원정원관리원 2026년 제3차 신규직원 채용 공고",
+    "inst": "한국수목원정원관리원",
+    "deadline": "20260921",
+    "url": "https://www.koagi.or.kr/www/user/bbs/BD_selectBbsList.do?q_bbsSn=1009"
+  },
+  "304686": {
+    "title": "코레일유통(주) 2026년 일반직(IT개발) 경력사원 채용공고",
+    "inst": "코레일유통(주)",
+    "deadline": "20260921",
+    "url": "https://www.korailretail.com/"
+  },
+  "304672": {
+    "title": "[제2026-09] 한국통계정보원 기간제 근로자 채용 공고",
+    "inst": "(재)한국통계정보원",
+    "deadline": "20260916",
+    "url": "https://www.kosii.or.kr/kosii/dc/pstmng/dcCmPstMngDetail.do?menuCd=DC0505010000&bbsId=BBS00000000000000060&pstId=PST00000000000004087&page=1&srchTxt="
+  },
+  "304665": {
+    "title": "한전KDN(주) 경남사업처 AMI 분야 비정규직 모집공고",
+    "inst": "한전KDN",
+    "deadline": "20260922",
+    "url": "https://없음."
+  },
+  "304607": {
+    "title": "2026년 제4차 한국교통안전공단 자율주행본부 기간제근로자 채용 공고",
+    "inst": "한국교통안전공단",
+    "deadline": "20260922",
+    "url": "https://kotsa1.career.co.kr/"
   }
 }
