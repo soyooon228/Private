@@ -1,40 +1,4 @@
 {
-  "304653": {
-    "title": "2026년도 한국고용정보원 2차 직원 채용 공고",
-    "inst": "한국고용정보원",
-    "deadline": "20260922",
-    "url": "https://www.keis.or.kr"
-  },
-  "304763": {
-    "title": "2026년 하반기 경력직원 채용",
-    "inst": "한국전기안전공사",
-    "deadline": "20260922",
-    "url": "https://kesco.or.kr/recruit/main.do"
-  },
-  "304761": {
-    "title": "2026년 하반기 한국도로공사 일반직 신입(인턴)사원 채용 공고",
-    "inst": "한국도로공사",
-    "deadline": "20260922",
-    "url": "https://www.ex.co.kr"
-  },
-  "304717": {
-    "title": "2026년도 하반기 정규직(신입사원) 채용공고",
-    "inst": "한국전력기술주식회사",
-    "deadline": "20260922",
-    "url": "https://kepco-enc.cairos.co.kr/kepco-enc/"
-  },
-  "304665": {
-    "title": "한전KDN(주) 경남사업처 AMI 분야 비정규직 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20260922",
-    "url": "https://없음."
-  },
-  "304607": {
-    "title": "2026년 제4차 한국교통안전공단 자율주행본부 기간제근로자 채용 공고",
-    "inst": "한국교통안전공단",
-    "deadline": "20260922",
-    "url": "https://kotsa1.career.co.kr/"
-  },
   "304726": {
     "title": "한전KDN(주) 진주지사 배전분야 비정규직 모집공고",
     "inst": "한전KDN",
@@ -340,5 +304,11 @@
     "inst": "(재)우체국금융개발원",
     "deadline": "20261006",
     "url": "https://www.posid.or.kr/"
+  },
+  "305128": {
+    "title": "한국부동산원 전문계약직(정규직 전환형) 채용 공고",
+    "inst": "한국부동산원",
+    "deadline": "20261008",
+    "url": "https://www.reb.or.kr/recruit"
   }
 }
