@@ -1,82 +1,4 @@
 {
-  "305140": {
-    "title": "한국항로표지기술원 기간제 계약직(연구원) 채용 공고",
-    "inst": "한국항로표지기술원",
-    "deadline": "20261006",
-    "url": "https://recruit.incruit.com/katon/"
-  },
-  "305150": {
-    "title": "2026년 하반기 극지연구소 기간제계약직 채용 공고",
-    "inst": "극지연구소",
-    "deadline": "20261006",
-    "url": "https://kopri.recruiter.co.kr/"
-  },
-  "305207": {
-    "title": "한국환경공단 화학안전지원단 생활환경안전처 주거환경관리부 기간제근로자(촉탁라급) 채용",
-    "inst": "한국환경공단",
-    "deadline": "20261006",
-    "url": "https://www.keco.or.kr/web/lay1/bbs/S1T1205C1207/A/22/view.do?article_seq=100614&cpage=1&rows=10&condition=&keyword="
-  },
-  "305199": {
-    "title": "2026년 하반기 한국인터넷진흥원 일반직, 일반계약직 채용 공고",
-    "inst": "한국인터넷진흥원",
-    "deadline": "20261006",
-    "url": "https://kisa.applyin.co.kr/"
-  },
-  "305198": {
-    "title": "2026년 제2차 한국장애인고용공단 직원 채용",
-    "inst": "한국장애인고용공단",
-    "deadline": "20261006",
-    "url": "https://kead.careerlink.kr/"
-  },
-  "305191": {
-    "title": "한국국방연구원 2026년도 수시 2차 채용공고",
-    "inst": "한국국방연구원",
-    "deadline": "20261006",
-    "url": "https://kida.brms.kr/"
-  },
-  "305187": {
-    "title": "한전KDN(주) 진주지사 AMI 분야 비정규직(장애인) 모집공고",
-    "inst": "한전KDN",
-    "deadline": "20261006",
-    "url": "https://없음."
-  },
-  "305184": {
-    "title": "농업정책보험금융원 신규직원 채용 공고",
-    "inst": "농업정책보험금융원",
-    "deadline": "20261006",
-    "url": "https://apfs.recruiter.co.kr"
-  },
-  "305165": {
-    "title": "한전KDN(주) 목포지사 AMI분야 비정규직 모집공고(재공고)",
-    "inst": "한전KDN",
-    "deadline": "20261006",
-    "url": "https://,"
-  },
-  "305222": {
-    "title": "[NCS기반 블라인드 채용] 2026년 국가평생교육진흥원 정규직 채용 공고",
-    "inst": "국가평생교육진흥원",
-    "deadline": "20261006",
-    "url": "https://www.nile.or.kr/usr/wap/detail.do?app=11626&seq=2196162&lang=ko"
-  },
-  "305253": {
-    "title": "2026년 제6차 직원(정규직) 채용",
-    "inst": "한국교육학술정보원",
-    "deadline": "20261006",
-    "url": "https://keris.recruiter.co.kr"
-  },
-  "305239": {
-    "title": "2026년도 하반기 보훈 채용공고",
-    "inst": "한국전력공사",
-    "deadline": "20261006",
-    "url": "http://recruit.kepco.co.kr"
-  },
-  "305147": {
-    "title": "우체국금융개발원 2026년 9차 공개채용 공고",
-    "inst": "(재)우체국금융개발원",
-    "deadline": "20261006",
-    "url": "https://www.posid.or.kr/"
-  },
   "305128": {
     "title": "한국부동산원 전문계약직(정규직 전환형) 채용 공고",
     "inst": "한국부동산원",
@@ -124,12 +46,6 @@
     "inst": "국민건강보험공단 일산병원",
     "deadline": "20261007",
     "url": "https://nhimc.recruiter.co.kr/appsite/company/index"
-  },
-  "305413": {
-    "title": "농업정책보험금융원 신규직원 채용 공고",
-    "inst": "농업정책보험금융원",
-    "deadline": "20261006",
-    "url": "https://apfs.recruiter.co.kr"
   },
   "305398": {
     "title": "스포츠윤리센터 2026년 제2차 직원 신규채용 공고",
@@ -304,5 +220,29 @@
     "inst": "한전KDN",
     "deadline": "20261020",
     "url": "https://해당없음"
+  },
+  "305783": {
+    "title": "한전KDN(주) 서울본부 강남지사 전력통신팀 OA설비 유지보수 일용근로자 모집공고 ",
+    "inst": "한전KDN",
+    "deadline": "20261021",
+    "url": "https://해당없음"
+  },
+  "305781": {
+    "title": "[한국수자원공사] 경북지역협력단 영덕2현대화사업팀 특수직(기술관리_건설사업) 채용 공고",
+    "inst": "한국수자원공사",
+    "deadline": "20261021",
+    "url": "https://k-water.recruiter.co.kr/"
+  },
+  "305778": {
+    "title": "한전KDN(주) 전북사업처 배전자동화 통신공사 일용근로자 모집공고",
+    "inst": "한전KDN",
+    "deadline": "20261021",
+    "url": "https://없음."
+  },
+  "305774": {
+    "title": "2026년 제2차 일반직사원(경력직 및 채용형인턴) 채용 공고",
+    "inst": "코레일테크(주)",
+    "deadline": "20261021",
+    "url": "https://korailtech.cairos.co.kr/korailtech/"
   }
 }
