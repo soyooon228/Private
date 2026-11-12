@@ -3,34 +3,23 @@
 설정 파일
 =========
 
-이 파일은 두 가지 방식으로 작동합니다:
-  1) 로컬(내 컴퓨터)에서 직접 실행할 때: 아래 하드코딩된 값을 그대로 사용
-  2) GitHub Actions(클라우드 자동실행)에서 실행할 때: 환경변수(Secrets)가
-     있으면 그 값을 우선 사용 -> 키를 코드에 노출하지 않고 안전하게 관리 가능
-
-즉, 이 파일은 수정하지 않고 그대로 두셔도 되고,
-GitHub에는 이 파일이 그대로 올라가도 API 키가 저장소에 노출되지 않습니다.
-(GitHub Actions에서는 Repository Secrets 값이 우선 적용되기 때문)
+API 키와 슬랙 웹훅 URL은 환경변수로만 읽습니다.
+  - GitHub Actions: Repository Secrets (DATA_GO_KR_API_KEY, SLACK_WEBHOOK_URL)
+  - 로컬 실행: 터미널에서 export DATA_GO_KR_API_KEY=... 후 실행
 """
 
 import os
 
 # 1) 공공데이터포털 서비스키 (Decoding 키)
-#    로컬 실행용 기본값. GitHub Actions에서는 Secrets의 DATA_GO_KR_API_KEY가 우선 적용됩니다.
-DATA_GO_KR_API_KEY = os.environ.get(
-    "DATA_GO_KR_API_KEY",
-    "JBZ0DLLXtHpItJbF1I/G3U8UVO1fwhw5tL6FEneb5ek6Tovl6V9xHsqE/8EFdiYDEEeEhtN+7e9PZDMvxHXU1w=="
-)
+#    환경변수(GitHub Secrets 또는 로컬 export)로만 넣습니다. 코드에 키를 적지 마세요.
+DATA_GO_KR_API_KEY = os.environ.get("DATA_GO_KR_API_KEY", "")
 
 # 2) API 엔드포인트
 API_ENDPOINT = "https://apis.data.go.kr/1051000/recruitment/list"
 
 # 3) 슬랙 Incoming Webhook URL
-#    로컬 실행용 기본값. GitHub Actions에서는 Secrets의 SLACK_WEBHOOK_URL이 우선 적용됩니다.
-SLACK_WEBHOOK_URL = os.environ.get(
-    "SLACK_WEBHOOK_URL",
-    "https://hooks.slack.com/services/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"
-)
+#    환경변수(GitHub Secrets 또는 로컬 export)로만 넣습니다. 코드에 URL을 적지 마세요.
+SLACK_WEBHOOK_URL = os.environ.get("SLACK_WEBHOOK_URL", "")
 
 # 4) 한 번에 몇 건씩 가져올지 (최대 100)
 NUM_OF_ROWS = 100
@@ -40,7 +29,7 @@ NUM_OF_ROWS = 100
 # ----------------------------------------------------------------------
 
 # 고용형태 (여러 개면 콤마로 구분, 예: "R1010,R1020")
-hireTypeLst = ""
+hireTypeLst = "R1010"  # 정규직만
 
 # 채용구분 (예: "R2010" = 신입)
 recrutSe = ""
