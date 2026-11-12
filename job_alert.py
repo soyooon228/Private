@@ -56,6 +56,7 @@ def fetch_jobs() -> list:
         "pageNo": 1,
         "numOfRows": config.NUM_OF_ROWS,
         "ongoingYn": "Y",  # 현재 접수중인 공고만
+        "hireTypeLst": "R1010", 
     }
     # 선택적 서버측 필터 (config.py에서 값이 있을 때만 추가)
     for key in ("hireTypeLst", "recrutSe", "workRgnLst", "ncsCdLst", "acbgCondLst"):
