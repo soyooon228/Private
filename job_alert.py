@@ -18,8 +18,6 @@
 
 전체 설정은 config.py 에서 관리합니다.
 """
-# main.py 예시
-from calendar_manager import add_job_deadline_to_calendar
 import json
 import os
 from datetime import datetime
@@ -56,10 +54,10 @@ def fetch_jobs() -> list:
         "pageNo": 1,
         "numOfRows": config.NUM_OF_ROWS,
         "ongoingYn": "Y",  # 현재 접수중인 공고만
-        "hireTypeLst": "R1010", 
+        "hireTypeLst": "R1010",  # 정규직 (서버측 1차 필터)
     }
     # 선택적 서버측 필터 (config.py에서 값이 있을 때만 추가)
-    for key in ("hireTypeLst", "recrutSe", "workRgnLst", "ncsCdLst", "acbgCondLst"):
+    for key in ("recrutSe", "workRgnLst", "ncsCdLst", "acbgCondLst"):
         value = getattr(config, key, "")
         if value:
             params[key] = value
@@ -96,6 +94,13 @@ def matches_keywords(job: dict) -> bool:
         return True
     text = f"{job.get('recrutPbancTtl', '')} {job.get('instNm', '')}".lower()
     return any(kw.lower() in text for kw in config.KEYWORDS)
+
+
+def is_regular_only(job: dict) -> bool:
+    """고용형태가 정규직(R1010) '하나뿐인' 공고만 True.
+    (정규직+인턴 같은 혼합 공고 제외. 포함하려면 'R1010' in codes 로 변경)"""
+    codes = {c.strip() for c in str(job.get("hireTypeLst") or "").split(",") if c.strip()}
+    return codes == {"R1010"}
 
 
 def is_highlight_region(job: dict) -> bool:
@@ -153,7 +158,7 @@ def send_slack_message(new_jobs: list) -> None:
 def send_no_new_jobs_message() -> None:
     """새 공고가 없을 때 짧게 '정상 확인됨' 메시지를 보냅니다."""
     now = datetime.now().strftime("%m/%d %H:%M")
-    payload = {"text": f"✅ 채용정보 확인 완료 ({now}) — 새로운 전산직 공고 없음"}
+    payload = {"text": f"✅ 채용정보 확인 완료 ({now}) — 새로운 정규직 공고 없음"}
     try:
         resp = requests.post(config.SLACK_WEBHOOK_URL, json=payload, timeout=10)
         resp.raise_for_status()
@@ -172,13 +177,13 @@ def main():
         print("가져온 공고가 없습니다. (조건에 맞는 공고가 없거나 API 설정을 확인해주세요)")
         return
 
-    filtered = [j for j in all_jobs if matches_keywords(j)]
+    filtered = [j for j in all_jobs if is_regular_only(j) and matches_keywords(j)]
     new_jobs = [
         j for j in filtered
         if str(j.get("recrutPblntSn")) not in seen_ids
     ]
 
-    print(f"전체 {len(all_jobs)}건 중 키워드 일치 {len(filtered)}건, 신규 {len(new_jobs)}건")
+    print(f"전체 {len(all_jobs)}건 중 정규직·키워드 일치 {len(filtered)}건, 신규 {len(new_jobs)}건")
 
     # 마감일이 안 지난 공고들을 캘린더(Gist .ics)에 동기화
     calendar_sync.sync_calendar(filtered)
@@ -194,21 +199,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-# 예시 데이터 (실제 크롤링된 데이터)
-job_notice = {
-    'title': '2026년 하반기 채용 공고',
-    'due_date': '2026-08-25',  # 반드시 'YYYY-MM-DD' 형식이어야 함
-    'link': 'https://example.com/notice/1'
-}
-
-# 1. 기존 슬랙 알림 전송 로직
-# send_slack_notification(job_notice)
-
-# 2. 구글 캘린더 마감일 추가
-if job_notice.get('due_date'):
-    add_job_deadline_to_calendar(
-        title=job_notice['title'],
-        due_date=job_notice['due_date'],
-        link_url=job_notice['link']
-    )
